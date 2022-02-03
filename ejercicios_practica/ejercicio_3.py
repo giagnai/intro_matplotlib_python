@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -33,5 +34,13 @@ if __name__ == '__main__':
     # Elegir un marker a elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    fig.suptitle('Ejercicio N°3', fontsize=14)
+    ax = fig.add_subplot()
+
+    ax.scatter(x, y, color='green', marker='*', label='y=tanh(x)')
+    ax.set_facecolor('whitesmoke')
+    ax.grid('solid')
+    plt.show()
 
     print("terminamos")
